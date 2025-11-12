@@ -36,7 +36,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors relative group"
+                className="text-sm font-medium text-white hover:text-accent transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span>
@@ -44,7 +44,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
             ))}
             <a
               href="#contact"
-              className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-accent hover:text-accent-foreground transition-all font-medium"
+              className="px-6 py-2 bg-primary text-white rounded-full hover:bg-accent hover:text-accent-foreground transition-all font-medium"
             >
               Get In Touch
             </a>
@@ -66,7 +66,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="block text-sm font-medium text-foreground hover:text-accent transition-colors py-2"
+                className="block text-sm font-medium text-white hover:text-accent transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -74,7 +74,7 @@ export default function Navbar({ isScrolled }: NavbarProps) {
             ))}
             <a
               href="#contact"
-              className="block px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-accent text-center transition-all font-medium"
+              className="block px-6 py-2 bg-primary text-white rounded-full hover:bg-accent text-center transition-all font-medium"
               onClick={() => setIsOpen(false)}
             >
               Get In Touch

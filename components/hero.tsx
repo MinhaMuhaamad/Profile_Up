@@ -11,93 +11,76 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Grey background (left side) */}
-      <div className="absolute inset-0 bg-gray-100 -z-20"></div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Grey background (left side) - exactly 50% */}
+      <div className="absolute inset-0 bg-gray-100 -z-20 w-1/2"></div>
 
-      {/* Black background (right side) with diagonal cut */}
-      <div className="absolute inset-0 -z-20">
-        <div
-          className="absolute inset-0 bg-black"
-          style={{
-            clipPath: "polygon(55% 0%, 100% 0%, 100% 100%, 30% 100%)",
-          }}
-        ></div>
-      </div>
+      {/* Black background (right side) - exactly 50% */}
+      <div className="absolute inset-0 bg-black -z-20 left-1/2 w-1/2"></div>
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-0 items-center min-h-screen">
         {/* Left Content - on grey background */}
-        <div className={`${isVisible ? "animate-slide-in-left" : "opacity-0"} z-10`}>
-          <div className="space-y-4 mb-8">
-            <p className="text-primary font-medium text-lg">Hello, I'm</p>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-black text-balance">Minha</h1>
-            <p className="text-xl sm:text-2xl text-gray-600">Software Engineer</p>
+        <div className={`${isVisible ? "animate-slide-in-left" : "opacity-0"} z-10 transition-all duration-700 ease-out flex flex-col justify-center min-h-screen px-8 sm:px-12 lg:px-16 xl:px-20`}>
+          {/* Main Text Content - Vertically Centered */}
+          <div className="space-y-3 sm:space-y-4 mb-12 sm:mb-16">
+            <p className="text-black font-medium text-2xl sm:text-3xl lg:text-4xl xl:text-5xl transition-all duration-700 delay-100">Hello, I'm</p>
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] font-bold text-black leading-[1.1] transition-all duration-700 delay-200">Minha</h1>
+            <p className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-gray-600 font-normal transition-all duration-700 delay-300">Software Engineer</p>
           </div>
 
-          <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-lg text-balance">
-            Passionate Software Engineering student skilled in Agile development, UML modeling, and full-stack
-            development with React, Next.js, and Node.js. Experienced in building AI-driven solutions and scalable
-            applications.
-          </p>
-
-          <div className="flex flex-wrap gap-4 mb-12">
+          {/* Social Links - Square buttons with rounded corners */}
+          <div className="flex items-center gap-3 sm:gap-4">
             <a
-              href="#contact"
-              className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-all font-medium hover:shadow-lg"
+              href="mailto:minhaghulammuhammad@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-200 hover:bg-gray-300 text-black rounded-lg flex items-center justify-center transition-all shadow-sm"
             >
-              Let's Connect
+              <Mail size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
             </a>
             <a
-              href="#projects"
-              className="px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white rounded-full transition-all font-medium"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-200 hover:bg-gray-300 text-black rounded-lg flex items-center justify-center transition-all shadow-sm"
             >
-              View My Work
+              <Github size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
             </a>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-6">
-            <p className="text-sm text-gray-600">Follow me</p>
-            <div className="flex gap-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-300 text-black hover:bg-black hover:text-white rounded-full transition-all"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-gray-300 text-black hover:bg-black hover:text-white rounded-full transition-all"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="mailto:minhaghulammuhammad@gmail.com"
-                className="p-3 bg-gray-300 text-black hover:bg-black hover:text-white rounded-full transition-all"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gray-200 hover:bg-gray-300 text-black rounded-lg flex items-center justify-center transition-all shadow-sm"
+            >
+              <Linkedin size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
+            </a>
           </div>
         </div>
 
         {/* Right Image - on black background */}
-        <div className={`${isVisible ? "animate-slide-in-right" : "opacity-0"} flex justify-center z-10`}>
-          <div className="relative w-full max-w-md">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-gray-500/10 rounded-3xl blur-2xl"></div>
-            <div className="relative bg-gray-900 rounded-3xl overflow-hidden aspect-square flex items-center justify-center border-2 border-gray-800">
-              <div className="text-center space-y-4">
-                <img src="/professional-portrait.png" alt="Profile" className="w-full h-full object-cover" />
-                <p className="text-white text-sm px-4">
-                  This is not my photo, but I dearly hope to get one just like this
-                </p>
-              </div>
+        <div className={`${isVisible ? "animate-slide-in-right" : "opacity-0"} relative flex justify-center items-center z-10 transition-all duration-700 min-h-screen px-8 sm:px-12 lg:px-16 xl:px-20`}>
+          <div className="relative w-full max-w-md xl:max-w-lg flex flex-col items-center justify-center">
+            <div className="relative overflow-hidden flex items-center justify-center">
+              <img 
+                src="/gemini1.png" 
+                alt="Profile" 
+                className="w-full h-auto max-h-[85vh] object-contain"
+                onError={(e) => {
+                  // Fallback to professional-portrait.png if gemini1.png doesn't exist
+                  const target = e.target as HTMLImageElement;
+                  if (!target.src.includes("professional-portrait.png")) {
+                    target.src = "/professional-portrait.png";
+                  } else if (!target.src.includes("placeholder-user.jpg")) {
+                    target.src = "/placeholder-user.jpg";
+                  }
+                }}
+              />
             </div>
           </div>
+          {/* Disclaimer text - bottom right of the black section */}
+          <p className="absolute bottom-8 right-8 sm:right-12 lg:right-16 xl:right-20 text-white/70 text-xs sm:text-sm">
+            This is not my photo, but I dearly hope to get one just like this
+          </p>
         </div>
       </div>
     </section>
