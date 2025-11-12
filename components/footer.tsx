@@ -57,7 +57,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground rounded-full transition-all"
+                    className="p-3 bg-primary-foreground/10 hover:bg-accent hover:text-accent-foreground rounded-full transition-all duration-300 hover:scale-110 active:scale-95"
                     aria-label={social.label}
                   >
                     <Icon size={20} />

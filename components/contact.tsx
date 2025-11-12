@@ -107,7 +107,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Your name"
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:border-accent transition-all duration-300 focus:ring-2 focus:ring-accent/20"
                 />
               </div>
 
@@ -120,7 +120,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="your.email@example.com"
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:border-accent transition-all duration-300 focus:ring-2 focus:ring-accent/20"
                 />
               </div>
 
@@ -133,13 +133,13 @@ export default function Contact() {
                   required
                   placeholder="Tell me about your project..."
                   rows={5}
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:border-accent transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:border-accent transition-all duration-300 focus:ring-2 focus:ring-accent/20 resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-accent hover:text-accent-foreground transition-all font-medium flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-300 font-medium flex items-center justify-center gap-2 hover:scale-105 active:scale-95 hover:shadow-lg"
               >
                 <Send size={18} />
                 Send Message

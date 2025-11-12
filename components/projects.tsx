@@ -85,7 +85,7 @@ export default function Projects() {
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
                 </div>
@@ -106,11 +106,11 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <button className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-accent hover:text-accent-foreground transition-all font-medium">
+                  <button className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-300 font-medium hover:scale-105 active:scale-95 hover:shadow-lg">
                     <ExternalLink size={18} />
                     View Project
                   </button>
-                  <button className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-all font-medium">
+                  <button className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-all duration-300 font-medium hover:scale-105 active:scale-95">
                     <Github size={18} />
                     Code
                   </button>
@@ -127,7 +127,7 @@ export default function Projects() {
             {otherProjects.map((project, index) => (
               <div
                 key={index}
-                className={`group p-6 bg-background rounded-xl border border-border hover:border-accent hover:shadow-lg transition-all ${
+                className={`group p-6 bg-background rounded-xl border border-border hover:border-accent hover:shadow-lg transition-all duration-500 hover:scale-105 ${
                   inView ? "animate-scale-in" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${(index + featuredProjects.length) * 100}ms` }}

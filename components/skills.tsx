@@ -74,7 +74,7 @@ export default function Skills() {
               className={`h-full ${inView ? "animate-fade-in-up" : "opacity-0"}`}
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
-              <div className="h-full p-8 bg-gradient-to-br from-background via-background to-accent/5 rounded-2xl border border-border hover:border-accent hover:shadow-xl transition-all duration-300 group">
+              <div className="h-full p-8 bg-gradient-to-br from-background via-background to-accent/5 rounded-2xl border border-border hover:border-accent hover:shadow-xl transition-all duration-500 group hover:scale-[1.02]">
                 {/* Category Title */}
                 <h3 className="text-lg font-semibold text-foreground mb-6 pb-4 border-b border-accent/30 group-hover:text-accent transition-colors duration-300">
                   {category.category}
@@ -85,7 +85,7 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="flex items-center gap-3 p-3 rounded-lg bg-background/50 hover:bg-accent/10 transition-all duration-200 group/skill cursor-pointer"
+                      className="flex items-center gap-3 p-3 rounded-lg bg-background/50 hover:bg-accent/10 transition-all duration-300 group/skill cursor-pointer hover:translate-x-1"
                     >
                       {/* Skill Icon */}
                       <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center text-lg group-hover/skill:bg-accent/30 group-hover/skill:scale-110 transition-all duration-200">
